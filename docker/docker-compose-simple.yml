@@ -1,0 +1,11 @@
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: mpcoven-nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - ./build:/usr/share/nginx/html:ro
+      - ./nginx-no-ssl.conf:/etc/nginx/conf.d/default.conf:ro
+

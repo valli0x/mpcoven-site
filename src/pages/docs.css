@@ -1,0 +1,85 @@
+/* ============================================================
+   Docs (stub)
+   ============================================================ */
+.page--docs {
+  min-height: 100vh;
+  background: var(--bg);
+  background-image: radial-gradient(
+    120% 80% at 80% -10%,
+    rgba(98, 126, 234, 0.1) 0%,
+    transparent 55%
+  );
+  display: flex;
+  flex-direction: column;
+}
+.page--docs main {
+  flex: 1;
+}
+
+.docs {
+  padding-top: 96px;
+  padding-bottom: 120px;
+  max-width: 760px;
+}
+.docs__title {
+  font-size: 44px;
+  line-height: 1.06;
+  letter-spacing: -0.025em;
+  font-weight: 600;
+  color: var(--text-strong);
+  margin-top: 22px;
+  text-wrap: balance;
+}
+.docs__lede {
+  font-size: 17px;
+  line-height: 1.62;
+  color: var(--text-muted);
+  margin-top: 22px;
+}
+.docs__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+.docs__toc {
+  margin-top: 56px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.docs__toc-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px 22px;
+}
+.docs__toc-row + .docs__toc-row {
+  border-top: 1px solid var(--line);
+}
+.docs__toc-key {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+}
+.docs__toc-val {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--text-muted-2);
+  text-align: right;
+}
+
+@media (max-width: 600px) {
+  .docs__title {
+    font-size: 32px;
+  }
+  .docs__toc-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .docs__toc-val {
+    text-align: left;
+  }
+}
