@@ -1,6 +1,5 @@
-import { Link } from 'react-router-dom'
 import { LogoMark } from './icons.jsx'
-import { REPO_URL } from '../constants.js'
+import { REPO_URL, DOCS_URL } from '../constants.js'
 
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -22,9 +21,9 @@ export default function Footer() {
 
         <div>
           <div className="site-footer__heading">Product</div>
-          <Link to="/docs" className="site-footer__link">Documentation</Link>
+          <a href={DOCS_URL} className="site-footer__link">Documentation</a>
           <a href="/#how" className="site-footer__link">How it works</a>
-          <a href="/#architecture" className="site-footer__link">Architecture</a>
+          <a href="https://mpcoven.net/app/" className="site-footer__link">Open the app</a>
         </div>
 
         <div>

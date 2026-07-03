@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { LogoMark, GitHubIcon } from './icons.jsx'
-import { REPO_URL } from '../constants.js'
+import { REPO_URL, DOCS_URL } from '../constants.js'
 
 export default function Header() {
   return (
@@ -16,8 +16,7 @@ export default function Header() {
 
         <nav className="site-nav">
           <a href="/#how" className="site-nav__link">How it works</a>
-          <a href="/#architecture" className="site-nav__link">Architecture</a>
-          <Link to="/docs" className="site-nav__link">Docs</Link>
+          <a href={DOCS_URL} className="site-nav__link">Docs</a>
           <a
             href={REPO_URL}
             target="_blank"
